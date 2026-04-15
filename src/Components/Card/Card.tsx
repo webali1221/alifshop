@@ -4,6 +4,7 @@ import { FaRegHeart, FaHeart } from "react-icons/fa6";
 import { useCart } from "../../context/CardContext";
 import "./Card.css";
 
+// 1. Interface aniq bo'lishi shart
 interface iCard {
   img: string;
   text: string;
@@ -12,8 +13,8 @@ interface iCard {
 }
 
 function Card({ card }: { card: iCard }) {
-  // likeCount bu yerda kerak emas, uni o'chirib tashladik
   const { addToCart, toggleLike } = useCart();
+  
   const [isLiked, setIsLiked] = useState(false);
 
   const handleLike = () => {
@@ -31,14 +32,19 @@ function Card({ card }: { card: iCard }) {
           <FaRegHeart className="heart" onClick={handleLike} />
         )}
       </div>
+      
       <img className="card-img" src={card.img} alt={card.text} />
-      <p>{card.text}</p>
-      <span className="spamm">{card.spamm}</span>
-      <h3 className="price">{card.price}</h3>
-      <button className="card-btn" onClick={() => addToCart(card)}>
-        <FiShoppingCart className="card-btn-ic" />
-        Savatga
-      </button>
+      
+      <div className="card-info">
+        <p className="card-text">{card.text}</p>
+        <span className="spamm">{card.spamm}</span>
+        <h3 className="price">{card.price}</h3>
+        
+        <button className="card-btn" onClick={() => addToCart()}>
+          <FiShoppingCart className="card-btn-ic" />
+          Savatga
+        </button>
+      </div>
     </div>
   );
 }

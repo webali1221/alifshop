@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 interface CardContextType {
   cartCount: number;
   likeCount: number;
-  addToCart: (item: any) => void;
+  addToCart: () => void; // Bu yerda ham argumentni olib tashladik
   toggleLike: (isAdding: boolean) => void;
 }
 
@@ -14,7 +14,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [cartCount, setCartCount] = useState(0);
   const [likeCount, setLikeCount] = useState(0);
 
-  const addToCart = (item: any) => {
+  // 'item' olib tashlandi, chunki u faqat countni oshirish uchun kerak
+  const addToCart = () => {
     setCartCount((prev) => prev + 1);
   };
 
@@ -31,6 +32,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
 export const useCart = () => {
   const context = useContext(CartContext);
-  if (!context) throw new Error("useCart must be used within a CardProvider");
+  if (!context) throw new Error("useCart must be used within a CartProvider");
   return context;
 };
