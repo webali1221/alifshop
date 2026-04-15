@@ -1,0 +1,98 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 200px;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 7px 1px black;
+}
+
+.card p {
+    margin-left: 10px;
+}
+
+.heart {
+    position: absolute;
+    left: 170px;
+    top: 10px;
+    color: gray;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.heart:hover {
+    color: red;
+}
+
+
+.heart.active {
+  color: red; 
+  border-bottom: none;
+}
+
+.like-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.like-count{
+    position: absolute;
+    background: red;
+    color: white;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 50%;
+}
+.card-btn {
+    width: 180px;
+    height: 47px;
+    border-radius: 9px;
+    background: #FFBE1F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10px;
+    border: 2px solid transparent;
+    margin: 0 auto;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-btn:hover {
+    background: white;
+    border: 2px solid #FFBE1F;
+}
+
+
+.card-btn-ic {
+    font-size: 20px;
+}
+
+.price {
+    color: #FF6D6D;
+    margin-left: 10px;
+}
+
+.spamm {
+    margin-left: 5px;
+    background: #FFEDC2;
+    border: 1px solid #FFCE57;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+.card-img{
+    width: 100%;
+    border-radius: 20px;
+    height: 200px;
+}

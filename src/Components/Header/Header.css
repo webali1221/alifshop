@@ -1,0 +1,140 @@
+Header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.catalog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 228px;
+    height: 52px;
+    background: #FFBD1B;
+    font-family: 'Courier New', Courier, monospace'';
+    border-radius: 8px;
+    font-weight: 550;
+    border: 2px solid transparent;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+}
+.menu{
+    font-size: 25px;
+}
+.catalog:hover {
+    cursor: pointer;
+    background: white;
+    border: 2px solid #FFBD1B;
+}
+
+.inp {
+    width: 300px;
+    height: 56px;
+    border: 2px solid #FFBD1B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+input {
+    width: 248px;
+    height: 52px;
+    border: none;
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+.inp-btn {
+    width: 44px;
+    height: 50px;
+    background: #FFB500;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #FFB500;
+}
+.inp-btn:hover{
+    background: white;
+    border: 2px solid #FFB500;
+    color: #FFB500;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.cart-logo{
+    font: bold;
+    font-size: 25px;
+}
+.fav-logo{
+    font: bold;
+    font-size: 23px;
+}
+.fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sign {
+    width: 67px;
+    height: 40px;
+    border-radius: 7px;
+    border: 2px solid #FF9500;
+    transition: all 0.3s ease-in-out;
+}
+.sign:hover{
+    background: #FF9500;
+    color: white;
+    cursor: pointer;
+}
+.lan{
+    background: white;
+    border: 2px solid transparent;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart,
+.fav {
+  position: relative;
+}
