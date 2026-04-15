@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState } from "react";
+import type { ReactNode } from "react";
 
 interface CardContextType {
   cartCount: number;
@@ -15,7 +16,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const addToCart = (item: any) => {
     setCartCount((prev) => prev + 1);
-    console.log("Savatchaga qo'shildi:", item);
   };
 
   const toggleLike = (isAdding: boolean) => {
@@ -31,6 +31,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
 export const useCart = () => {
   const context = useContext(CartContext);
-  if (!context) throw new Error("useCart must be used within a CartProvider");
+  if (!context) throw new Error("useCart must be used within a CardProvider");
   return context;
 };
